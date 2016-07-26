@@ -12,6 +12,7 @@
 		856F67121D47E4B60031876A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856F67101D47E4B60031876A /* Main.storyboard */; };
 		856F67141D47E4B60031876A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 856F67131D47E4B60031876A /* Assets.xcassets */; };
 		856F67171D47E4B60031876A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856F67151D47E4B60031876A /* LaunchScreen.storyboard */; };
+		856F671F1D4804140031876A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856F671E1D4804140031876A /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		856F67131D47E4B60031876A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		856F67161D47E4B60031876A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		856F67181D47E4B60031876A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		856F671E1D4804140031876A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				856F671F1D4804140031876A /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 		856F67001D47E4B50031876A = {
 			isa = PBXGroup;
 			children = (
+				856F671E1D4804140031876A /* Alamofire.framework */,
 				856F670B1D47E4B50031876A /* SmartTips */,
 				856F670A1D47E4B50031876A /* Products */,
 			);
@@ -249,6 +253,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SmartTips/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gametime.SmartTips;
@@ -260,6 +268,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SmartTips/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gametime.SmartTips;
@@ -286,6 +298,7 @@
 				856F671D1D47E4B60031876A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

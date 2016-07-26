@@ -13,7 +13,21 @@
 		856F67141D47E4B60031876A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 856F67131D47E4B60031876A /* Assets.xcassets */; };
 		856F67171D47E4B60031876A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856F67151D47E4B60031876A /* LaunchScreen.storyboard */; };
 		856F671F1D4804140031876A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856F671E1D4804140031876A /* Alamofire.framework */; };
+		856F67231D4812F10031876A /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 856F671E1D4804140031876A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		856F67221D4812C00031876A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				856F67231D4812F10031876A /* Alamofire.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		856F67091D47E4B50031876A /* SmartTips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTips.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +92,7 @@
 				856F67051D47E4B50031876A /* Sources */,
 				856F67061D47E4B50031876A /* Frameworks */,
 				856F67071D47E4B50031876A /* Resources */,
+				856F67221D4812C00031876A /* CopyFiles */,
 			);
 			buildRules = (
 			);

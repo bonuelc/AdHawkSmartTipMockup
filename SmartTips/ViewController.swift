@@ -51,7 +51,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        guard let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("tipCell") else {
+        guard let cell: TipTableViewCell = tableView.dequeueReusableCellWithIdentifier("tipCell") as? TipTableViewCell else {
             return UITableViewCell()
         }
         

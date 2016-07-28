@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var json: JSON! {
+    var json: JSON = JSON([]) {
         didSet {
             tableView.reloadData()
         }
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return json?["data"].count ?? 0
+        return json["data"].count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

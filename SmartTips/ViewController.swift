@@ -55,13 +55,16 @@ extension ViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
+        if let provider = json["data"][indexPath.row]["relationships"]["identity"]["data"]["provider"].string {
+            cell.providerLabel.text = provider
+        }
         
         if let title = json["data"][indexPath.row]["attributes"]["title"].string {
-            cell.textLabel?.text = title
+            cell.titleLabel.text = title
         }
         
         if let description = json["data"][indexPath.row]["attributes"]["description"].string {
-            cell.detailTextLabel?.text = description
+            cell.descriptionLabel.text = description
         }
         
         if let status = json["data"][indexPath.row]["attributes"]["status"].int {

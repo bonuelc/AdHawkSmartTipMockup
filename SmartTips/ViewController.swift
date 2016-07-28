@@ -64,6 +64,14 @@ extension ViewController: UITableViewDataSource {
             cell.detailTextLabel?.text = description
         }
         
+        if let status = json["data"][indexPath.row]["attributes"]["status"].int {
+            if status == 2 {
+                cell.backgroundColor = UIColor.greenColor()
+            } else if status == 3 {
+                cell.backgroundColor = UIColor.redColor()
+            }
+        }
+        
         return cell
     }
 }

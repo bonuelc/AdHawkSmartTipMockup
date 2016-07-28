@@ -55,6 +55,11 @@ extension ViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
+        
+        if let title = json["data"][indexPath.row]["attributes"]["title"].string {
+            cell.textLabel?.text = title
+        }
+        
         return cell
     }
 }

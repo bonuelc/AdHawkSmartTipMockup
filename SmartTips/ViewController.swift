@@ -95,4 +95,13 @@ extension ViewController: UITableViewDelegate {
         
         return [reject, accept]
     }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+            
+        guard let cell: TipTableViewCell = tableView.dequeueReusableCellWithIdentifier("tipCell") as? TipTableViewCell else {
+            return UITableViewCell().bounds.size.height
+        }
+        
+        return cell.bounds.size.height
+    }
 }

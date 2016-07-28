@@ -75,3 +75,21 @@ extension ViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        
+        let reject = UITableViewRowAction(style: .Destructive, title: "Reject") { (action, indexPath) in
+            self.json["data"][indexPath.row]["attributes"]["status"].int = 3
+        }
+        
+        let accept = UITableViewRowAction(style: .Normal, title: "Accept") { (action, indexPath) in
+            self.json["data"][indexPath.row]["attributes"]["status"].int = 2
+        }
+        
+        accept.backgroundColor = UIColor.greenColor()
+        
+        return [reject, accept]
+    }
+}

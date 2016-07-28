@@ -16,6 +16,7 @@
 		856F67231D4812F10031876A /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 856F671E1D4804140031876A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8594F2AF1D492E3A001B1F3F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8594F2AE1D492E3A001B1F3F /* SwiftyJSON.framework */; };
 		8594F2B01D492E5B001B1F3F /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8594F2AE1D492E3A001B1F3F /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85AFB6C81D4AB2800008B66D /* TipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFB6C71D4AB2800008B66D /* TipTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,7 @@
 		856F67181D47E4B60031876A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		856F671E1D4804140031876A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		8594F2AE1D492E3A001B1F3F /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		85AFB6C71D4AB2800008B66D /* TipTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				856F670C1D47E4B60031876A /* AppDelegate.swift */,
 				856F670E1D47E4B60031876A /* ViewController.swift */,
+				85AFB6C71D4AB2800008B66D /* TipTableViewCell.swift */,
 				856F67101D47E4B60031876A /* Main.storyboard */,
 				856F67131D47E4B60031876A /* Assets.xcassets */,
 				856F67151D47E4B60031876A /* LaunchScreen.storyboard */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				856F670F1D47E4B60031876A /* ViewController.swift in Sources */,
+				85AFB6C81D4AB2800008B66D /* TipTableViewCell.swift in Sources */,
 				856F670D1D47E4B60031876A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

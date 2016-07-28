@@ -60,6 +60,10 @@ extension ViewController: UITableViewDataSource {
             cell.textLabel?.text = title
         }
         
+        if let description = json["data"][indexPath.row]["attributes"]["description"].string {
+            cell.detailTextLabel?.text = description
+        }
+        
         return cell
     }
 }

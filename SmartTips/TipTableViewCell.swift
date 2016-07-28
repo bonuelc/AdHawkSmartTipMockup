@@ -10,4 +10,7 @@ import UIKit
 
 class TipTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var providerLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
 }

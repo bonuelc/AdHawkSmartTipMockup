@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class SmartTipViewController: UIViewController {
+    
+    var data: JSON = JSON([]) 
 
     override func viewDidLoad() {
         super.viewDidLoad()

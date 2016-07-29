@@ -114,3 +114,13 @@ extension ViewController: UITableViewDelegate {
         return cell.bounds.size.height
     }
 }
+
+extension ViewController: SmartTipDelegate {
+    func tipStatusSelectionDidFinish(controller: SmartTipViewController) {
+        controller.dismissViewControllerAnimated(true) { () in
+            if let index = self.tableView.indexPathForSelectedRow?.row {
+                self.json["data"][index] = controller.data
+            }
+        }
+    }
+}

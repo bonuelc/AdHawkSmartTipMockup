@@ -22,13 +22,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         getJSON()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -76,11 +70,11 @@ extension ViewController: UITableViewDataSource {
             cell.descriptionLabel.text = description
         }
         
-        if let status = json["data"][indexPath.row]["attributes"]["status"].int {
-            if status == 2 {
-                cell.backgroundColor = SmartTipColor.greenColor()
-            } else if status == 3 {
-                cell.backgroundColor = SmartTipColor.redColor()
+        if let status = Status(rawValue: json["data"][indexPath.row]["attributes"]["status"].int!) {
+            switch status {
+            case .Accepted: cell.backgroundColor = SmartTipColor.greenColor()
+            case .Rejected: cell.backgroundColor = SmartTipColor.redColor()
+            default: break
             }
         }
         

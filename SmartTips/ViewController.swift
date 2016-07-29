@@ -69,9 +69,9 @@ extension ViewController: UITableViewDataSource {
         
         if let status = json["data"][indexPath.row]["attributes"]["status"].int {
             if status == 2 {
-                cell.backgroundColor = UIColor.greenColor()
+                cell.backgroundColor = SmartTipColor.greenColor()
             } else if status == 3 {
-                cell.backgroundColor = UIColor.redColor()
+                cell.backgroundColor = SmartTipColor.redColor()
             }
         }
         
@@ -91,7 +91,8 @@ extension ViewController: UITableViewDelegate {
             self.json["data"][indexPath.row]["attributes"]["status"].int = 2
         }
         
-        accept.backgroundColor = UIColor.greenColor()
+        reject.backgroundColor = SmartTipColor.redColor()
+        accept.backgroundColor = SmartTipColor.greenColor()
         
         return [reject, accept]
     }

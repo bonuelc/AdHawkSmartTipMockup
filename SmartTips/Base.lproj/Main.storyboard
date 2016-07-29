@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="214" y="522"/>
         </scene>
-        <!--View Controller-->
+        <!--Smart Tip View Controller-->
         <scene sceneID="JVs-fD-oix">
             <objects>
-                <viewController id="vo4-JL-Z7L" sceneMemberID="viewController">
+                <viewController id="vo4-JL-Z7L" customClass="SmartTipViewController" customModule="SmartTips" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VEI-ku-EHg"/>
                         <viewControllerLayoutGuide type="bottom" id="SIN-Ow-pnc"/>

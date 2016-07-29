@@ -54,20 +54,20 @@ class SmartTipViewController: UIViewController {
     }
     
     func updateData() {
-        data["attributes"]["status"].int = statusPicked.rawValue
+        data[statusPath].int = statusPicked.rawValue
     }
     
     func configureLabels() {
         
-        if let provider = data["relationships"]["identity"]["data"]["provider"].string {
+        if let provider = data[providerPath].string {
             providerLabel.text = provider
         }
         
-        if let title = data["attributes"]["title"].string {
+        if let title = data[titlePath].string {
             titleLabel.text = title
         }
         
-        if let description = data["attributes"]["description"].string {
+        if let description = data[descriptionPath].string {
             descriptionLabel.text = description
         }
     }

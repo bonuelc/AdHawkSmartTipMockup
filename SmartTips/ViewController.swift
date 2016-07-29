@@ -14,6 +14,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    
     let jsonURL: URLStringConvertible = "https://demo7998593.mockable.io/smarttips.json"
 
     var json: JSON = JSON([]) {
@@ -30,7 +31,7 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showSmartTipDetailView" {
             if let tipVC = segue.destinationViewController as? SmartTipViewController, index = tableView.indexPathForSelectedRow?.row {
-                tipVC.data = json["data"][index]
+                tipVC.data = json[arrayPath][index]
                 tipVC.delegate = self
             }
         }
@@ -51,7 +52,7 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return json["data"].count
+        return json[arrayPath].count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -60,19 +61,21 @@ extension ViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        if let provider = json["data"][indexPath.row]["relationships"]["identity"]["data"]["provider"].string {
+        let basePath: [JSONSubscriptType] = ["data", indexPath.row]
+        
+        if let provider = json[basePath][providerPath].string {
             cell.providerLabel.text = provider
         }
         
-        if let title = json["data"][indexPath.row]["attributes"]["title"].string {
+        if let title = json[basePath][titlePath].string {
             cell.titleLabel.text = title
         }
         
-        if let description = json["data"][indexPath.row]["attributes"]["description"].string {
+        if let description = json[basePath][descriptionPath].string {
             cell.descriptionLabel.text = description
         }
         
-        if let status = Status(rawValue: json["data"][indexPath.row]["attributes"]["status"].int!) {
+        if let status = Status(rawValue: json[basePath][statusPath].int!) {
             switch status {
             case .Accepted: cell.backgroundColor = SmartTipColor.greenColor()
             case .Rejected: cell.backgroundColor = SmartTipColor.redColor()
@@ -88,12 +91,14 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         
+        let basePath: [JSONSubscriptType] = ["data", indexPath.row]
+        
         let reject = UITableViewRowAction(style: .Destructive, title: "Reject") { (action, indexPath) in
-            self.json["data"][indexPath.row]["attributes"]["status"].int = Status.Rejected.rawValue
+            self.json[basePath][statusPath].int = Status.Rejected.rawValue
         }
         
         let accept = UITableViewRowAction(style: .Normal, title: "Accept") { (action, indexPath) in
-            self.json["data"][indexPath.row]["attributes"]["status"].int = Status.Accepted.rawValue
+            self.json[basePath][statusPath].int = Status.Accepted.rawValue
         }
         
         reject.backgroundColor = SmartTipColor.redColor()
@@ -116,7 +121,7 @@ extension ViewController: SmartTipDelegate {
     func tipStatusSelectionDidFinish(controller: SmartTipViewController) {
         controller.dismissViewControllerAnimated(true) { () in
             if let index = self.tableView.indexPathForSelectedRow?.row {
-                self.json["data"][index] = controller.data
+                self.json[arrayPath][index] = controller.data
             }
         }
     }

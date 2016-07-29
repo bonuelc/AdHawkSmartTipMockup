@@ -10,6 +10,7 @@
 		853EED7F1D4AEB3200071E0F /* SmartTipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853EED7E1D4AEB3200071E0F /* SmartTipViewController.swift */; };
 		85673A5F1D4BAB3E005146A2 /* SmartTipColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85673A5E1D4BAB3E005146A2 /* SmartTipColor.swift */; };
 		85673A631D4BD9EE005146A2 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85673A621D4BD9EE005146A2 /* Status.swift */; };
+		85673A651D4C14DC005146A2 /* JSONPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85673A641D4C14DC005146A2 /* JSONPaths.swift */; };
 		856F670D1D47E4B60031876A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F670C1D47E4B60031876A /* AppDelegate.swift */; };
 		856F670F1D47E4B60031876A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F670E1D47E4B60031876A /* ViewController.swift */; };
 		856F67121D47E4B60031876A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856F67101D47E4B60031876A /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		853EED7E1D4AEB3200071E0F /* SmartTipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartTipViewController.swift; sourceTree = "<group>"; };
 		85673A5E1D4BAB3E005146A2 /* SmartTipColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartTipColor.swift; sourceTree = "<group>"; };
 		85673A621D4BD9EE005146A2 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		85673A641D4C14DC005146A2 /* JSONPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONPaths.swift; sourceTree = "<group>"; };
 		856F67091D47E4B50031876A /* SmartTips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		856F670C1D47E4B60031876A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		856F670E1D47E4B60031876A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				856F670C1D47E4B60031876A /* AppDelegate.swift */,
 				856F670E1D47E4B60031876A /* ViewController.swift */,
+				85673A641D4C14DC005146A2 /* JSONPaths.swift */,
 				853EED7E1D4AEB3200071E0F /* SmartTipViewController.swift */,
 				85673A621D4BD9EE005146A2 /* Status.swift */,
 				85AFB6C71D4AB2800008B66D /* TipTableViewCell.swift */,
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				856F670F1D47E4B60031876A /* ViewController.swift in Sources */,
+				85673A651D4C14DC005146A2 /* JSONPaths.swift in Sources */,
 				85673A5F1D4BAB3E005146A2 /* SmartTipColor.swift in Sources */,
 				85AFB6C81D4AB2800008B66D /* TipTableViewCell.swift in Sources */,
 				853EED7F1D4AEB3200071E0F /* SmartTipViewController.swift in Sources */,

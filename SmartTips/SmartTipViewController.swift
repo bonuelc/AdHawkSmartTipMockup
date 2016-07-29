@@ -9,6 +9,10 @@
 import UIKit
 import SwiftyJSON
 
+protocol SmartTipDelegate {
+    func tipStatusSelectionDidFinish(controller: SmartTipViewController)
+}
+
 class SmartTipViewController: UIViewController {
     
     @IBOutlet weak var providerLabel: UILabel!

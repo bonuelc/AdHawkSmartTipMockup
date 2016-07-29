@@ -93,11 +93,11 @@ extension ViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         
         let reject = UITableViewRowAction(style: .Destructive, title: "Reject") { (action, indexPath) in
-            self.json["data"][indexPath.row]["attributes"]["status"].int = 3
+            self.json["data"][indexPath.row]["attributes"]["status"].int = Status.Rejected.rawValue
         }
         
         let accept = UITableViewRowAction(style: .Normal, title: "Accept") { (action, indexPath) in
-            self.json["data"][indexPath.row]["attributes"]["status"].int = 2
+            self.json["data"][indexPath.row]["attributes"]["status"].int = Status.Accepted.rawValue
         }
         
         reject.backgroundColor = SmartTipColor.redColor()

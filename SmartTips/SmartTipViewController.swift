@@ -57,7 +57,7 @@ class SmartTipViewController: UIViewController {
     
     @IBAction func okButtonTapped() {
         updateData()
-        dismissViewControllerAnimated(true, completion: nil)
+        delegate.tipStatusSelectionDidFinish(self)
     }
     
     func updateData() {

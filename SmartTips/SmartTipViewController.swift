@@ -21,10 +21,26 @@ class SmartTipViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        configureLabels()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func configureLabels() {
+        
+        if let provider = data["relationships"]["identity"]["data"]["provider"].string {
+            providerLabel.text = provider
+        }
+        
+        if let title = data["attributes"]["title"].string {
+            titleLabel.text = title
+        }
+        
+        if let description = data["attributes"]["description"].string {
+            descriptionLabel.text = description
+        }
     }
 }

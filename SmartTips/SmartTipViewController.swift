@@ -26,6 +26,7 @@ class SmartTipViewController: UIViewController {
     
     var data: JSON = JSON([])
     var statusPicked: Status = .Read
+    var delegate: SmartTipDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()

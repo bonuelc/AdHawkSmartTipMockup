@@ -21,6 +21,7 @@ class SmartTipViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     
     var data: JSON = JSON([])
+    var statusPicked: Status = .Read
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +29,34 @@ class SmartTipViewController: UIViewController {
         // Do any additional setup after loading the view.
         configureLabels()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func rejectButtonTapped() {
+        statusPicked = .Rejected
+        configureButtons()
+    }
+    
+    @IBAction func acceptButtonTapped() {
+        statusPicked = .Accepted
+        configureButtons()
+    }
+    
+    @IBAction func cancelButtonTapped() {
+        statusPicked = .Read
+        configureButtons()
+    }
+    
+    @IBAction func okButtonTapped() {
+        updateData()
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func updateData() {
+        data["attributes"]["status"].int = statusPicked.rawValue
     }
     
     func configureLabels() {
@@ -46,6 +71,22 @@ class SmartTipViewController: UIViewController {
         
         if let description = data["attributes"]["description"].string {
             descriptionLabel.text = description
+        }
+    }
+    
+    func configureButtons() {
+        
+        switch statusPicked {
+        case .Accepted, .Rejected:
+            rejectButton.hidden = true
+            acceptButton.hidden = true
+            okButton.hidden = false
+            cancelButton.hidden = false
+        default:
+            rejectButton.hidden = false
+            acceptButton.hidden = false
+            okButton.hidden = true
+            cancelButton.hidden = true
         }
     }
 }

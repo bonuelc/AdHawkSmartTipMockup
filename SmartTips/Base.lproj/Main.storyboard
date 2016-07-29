@@ -130,6 +130,9 @@
                                 <state key="normal" title="Reject">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="rejectButtonTapped" destination="vo4-JL-Z7L" eventType="touchUpInside" id="86A-hj-ZmP"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xt9-lw-zKL">
                                 <rect key="frame" x="0.0" y="520" width="300" height="80"/>
@@ -137,6 +140,9 @@
                                 <state key="normal" title="OK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="okButtonTapped" destination="vo4-JL-Z7L" eventType="touchUpInside" id="pRX-De-AMi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpX-Wg-9fK">
                                 <rect key="frame" x="300" y="520" width="300" height="80"/>
@@ -144,6 +150,9 @@
                                 <state key="normal" title="Accept">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="acceptButtonTapped" destination="vo4-JL-Z7L" eventType="touchUpInside" id="rrF-BY-yaM"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwR-cX-j0G">
                                 <rect key="frame" x="300" y="520" width="300" height="80"/>
@@ -151,6 +160,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelButtonTapped" destination="vo4-JL-Z7L" eventType="touchUpInside" id="LP8-Io-u39"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bP-68-4bq">
                                 <rect key="frame" x="20" y="154" width="560" height="358"/>

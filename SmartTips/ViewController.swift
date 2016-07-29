@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         if segue.identifier == "showSmartTipDetailView" {
             if let tipVC = segue.destinationViewController as? SmartTipViewController, index = tableView.indexPathForSelectedRow?.row {
                 tipVC.data = json["data"][index]
+                tipVC.delegate = self
             }
         }
     }

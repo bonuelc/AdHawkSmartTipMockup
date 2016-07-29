@@ -13,6 +13,8 @@ import SwiftyJSON
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    let jsonURL: URLStringConvertible = "https://demo7998593.mockable.io/smarttips.json"
 
     var json: JSON = JSON([]) {
         didSet {
@@ -36,7 +38,7 @@ class ViewController: UIViewController {
 
     func getJSON() {
         
-        Alamofire.request(.GET, "https://demo7998593.mockable.io/smarttips.json").responseJSON { response in
+        Alamofire.request(.GET, jsonURL).responseJSON { response in
             
             switch response.result {
             case .Success(let value): self.json = JSON(value)

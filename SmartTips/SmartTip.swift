@@ -61,6 +61,10 @@ struct SmartTip {
     mutating func accept() {
         status = Status.Accepted
     }
+    
+    mutating func read() {
+        status = Status.Read
+    }
 }
 
 extension SmartTip: Equatable, Comparable {

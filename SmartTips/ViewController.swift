@@ -16,12 +16,7 @@ class ViewController: UIViewController {
     
     
     let jsonURL: URLStringConvertible = "https://demo7998593.mockable.io/smarttips.json"
-
-    var json: JSON = JSON([]) {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    var json: JSON = JSON([])
     
     var smartTips: [SmartTip] = [] {
         didSet {

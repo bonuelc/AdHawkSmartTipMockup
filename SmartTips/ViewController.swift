@@ -77,26 +77,16 @@ extension ViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let basePath: [JSONSubscriptType] = ["data", indexPath.row]
+        let smartTip = smartTips[indexPath.row]
         
-        if let provider = json[basePath][providerPath].string {
-            cell.providerLabel.text = provider
-        }
+        cell.providerLabel.text = smartTip.provider
+        cell.titleLabel.text = smartTip.title
+        cell.descriptionLabel.text = smartTip.description
         
-        if let title = json[basePath][titlePath].string {
-            cell.titleLabel.text = title
-        }
-        
-        if let description = json[basePath][descriptionPath].string {
-            cell.descriptionLabel.text = description
-        }
-        
-        if let status = Status(rawValue: json[basePath][statusPath].int!) {
-            switch status {
-            case .Accepted: cell.backgroundColor = SmartTipColor.greenColor()
-            case .Rejected: cell.backgroundColor = SmartTipColor.redColor()
-            default: break
-            }
+        switch smartTip.status {
+        case .Accepted: cell.backgroundColor = SmartTipColor.greenColor()
+        case .Rejected: cell.backgroundColor = SmartTipColor.redColor()
+        default: break
         }
         
         return cell

@@ -25,7 +25,6 @@ class SmartTipViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     
     var smartTip: SmartTip!
-    var statusPicked: Status = .Read
     var delegate: SmartTipDelegate!
 
     override func viewDidLoad() {
@@ -34,27 +33,22 @@ class SmartTipViewController: UIViewController {
     }
     
     @IBAction func rejectButtonTapped() {
-        statusPicked = .Rejected
+        smartTip.reject()
         configureButtons()
     }
     
     @IBAction func acceptButtonTapped() {
-        statusPicked = .Accepted
+        smartTip.accept()
         configureButtons()
     }
     
     @IBAction func cancelButtonTapped() {
-        statusPicked = .Read
+        smartTip.read()
         configureButtons()
     }
     
     @IBAction func okButtonTapped() {
-        updateData()
         delegate.tipStatusSelectionDidFinish(self)
-    }
-    
-    func updateData() {
-        data[statusPath].int = statusPicked.rawValue
     }
     
     func configureLabels() {
@@ -65,7 +59,7 @@ class SmartTipViewController: UIViewController {
     
     func configureButtons() {
         
-        switch statusPicked {
+        switch smartTip.status {
         case .Accepted, .Rejected:
             rejectButton.hidden = true
             acceptButton.hidden = true

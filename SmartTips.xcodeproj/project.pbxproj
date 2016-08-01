@@ -69,6 +69,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85530EC71D4FFF5F007E4016 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				856F670C1D47E4B60031876A /* AppDelegate.swift */,
+				853EED7E1D4AEB3200071E0F /* SmartTipViewController.swift */,
+				856F670E1D47E4B60031876A /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		85530EC81D4FFF80007E4016 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				856F67181D47E4B60031876A /* Info.plist */,
+				85673A641D4C14DC005146A2 /* JSONPaths.swift */,
+				85673A5E1D4BAB3E005146A2 /* SmartTipColor.swift */,
+				85530EC51D4FCEF1007E4016 /* SmartTip.swift */,
+				85AFB6C71D4AB2800008B66D /* SmartTipTableViewCell.swift */,
+				85673A621D4BD9EE005146A2 /* Status.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		85530EC91D4FFF9C007E4016 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				856F67131D47E4B60031876A /* Assets.xcassets */,
+				856F67151D47E4B60031876A /* LaunchScreen.storyboard */,
+				856F67101D47E4B60031876A /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		856F67001D47E4B50031876A = {
 			isa = PBXGroup;
 			children = (
@@ -90,18 +123,9 @@
 		856F670B1D47E4B50031876A /* SmartTips */ = {
 			isa = PBXGroup;
 			children = (
-				856F670C1D47E4B60031876A /* AppDelegate.swift */,
-				856F670E1D47E4B60031876A /* ViewController.swift */,
-				85673A641D4C14DC005146A2 /* JSONPaths.swift */,
-				85530EC51D4FCEF1007E4016 /* SmartTip.swift */,
-				853EED7E1D4AEB3200071E0F /* SmartTipViewController.swift */,
-				85673A621D4BD9EE005146A2 /* Status.swift */,
-				85AFB6C71D4AB2800008B66D /* SmartTipTableViewCell.swift */,
-				85673A5E1D4BAB3E005146A2 /* SmartTipColor.swift */,
-				856F67101D47E4B60031876A /* Main.storyboard */,
-				856F67131D47E4B60031876A /* Assets.xcassets */,
-				856F67151D47E4B60031876A /* LaunchScreen.storyboard */,
-				856F67181D47E4B60031876A /* Info.plist */,
+				85530EC81D4FFF80007E4016 /* Model */,
+				85530EC91D4FFF9C007E4016 /* View */,
+				85530EC71D4FFF5F007E4016 /* Controller */,
 			);
 			path = SmartTips;
 			sourceTree = "<group>";

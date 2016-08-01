@@ -125,7 +125,7 @@ extension ViewController: SmartTipDelegate {
     func tipStatusSelectionDidFinish(controller: SmartTipViewController) {
         controller.dismissViewControllerAnimated(true) { () in
             if let index = self.tableView.indexPathForSelectedRow?.row {
-                self.json[arrayPath][index] = controller.data
+                self.smartTips[index] = controller.smartTip
             }
         }
     }

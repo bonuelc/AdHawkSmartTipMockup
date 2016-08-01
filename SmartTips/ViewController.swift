@@ -97,14 +97,12 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         
-        let basePath: [JSONSubscriptType] = ["data", indexPath.row]
-        
         let reject = UITableViewRowAction(style: .Destructive, title: "Reject") { (action, indexPath) in
-            self.json[basePath][statusPath].int = Status.Rejected.rawValue
+            self.smartTips[indexPath.row].reject()
         }
         
         let accept = UITableViewRowAction(style: .Normal, title: "Accept") { (action, indexPath) in
-            self.json[basePath][statusPath].int = Status.Accepted.rawValue
+            self.smartTips[indexPath.row].accept()
         }
         
         reject.backgroundColor = SmartTipColor.redColor()

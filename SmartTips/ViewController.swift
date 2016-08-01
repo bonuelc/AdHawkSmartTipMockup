@@ -51,7 +51,17 @@ class ViewController: UIViewController {
             case .Success(let value): self.json = JSON(value)
             case .Failure(let error): print(error)
             }
+            self.parseJSON()
         }
+    }
+    
+    func parseJSON() {
+        for smartTip in json[arrayPath].arrayValue {
+            if let validTip = SmartTip(smartTip: smartTip) {
+                smartTips.append(validTip)
+            }
+        }
+        smartTips.sortInPlace()
     }
 }
 

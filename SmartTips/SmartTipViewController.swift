@@ -58,18 +58,9 @@ class SmartTipViewController: UIViewController {
     }
     
     func configureLabels() {
-        
-        if let provider = data[providerPath].string {
-            providerLabel.text = provider
-        }
-        
-        if let title = data[titlePath].string {
-            titleLabel.text = title
-        }
-        
-        if let description = data[descriptionPath].string {
-            descriptionLabel.text = description
-        }
+        providerLabel.text = smartTip.provider
+        titleLabel.text = smartTip.title
+        descriptionLabel.text = smartTip.description
     }
     
     func configureButtons() {

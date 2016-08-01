@@ -23,6 +23,12 @@ class ViewController: UIViewController {
         }
     }
     
+    var smartTips: [SmartTip] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getJSON()

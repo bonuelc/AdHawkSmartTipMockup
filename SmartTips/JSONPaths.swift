@@ -13,3 +13,5 @@ let providerPath: [JSONSubscriptType] = ["relationships", "identity", "data", "p
 let titlePath: [JSONSubscriptType] = ["attributes", "title"]
 let descriptionPath: [JSONSubscriptType] = ["attributes", "description"]
 let statusPath: [JSONSubscriptType] = ["attributes", "status"]
+let expiresAtDatePath: [JSONSubscriptType] = ["attributes", "expires_at"]
+let createdAtDatePath: [JSONSubscriptType] = ["attributes", "created_at"]

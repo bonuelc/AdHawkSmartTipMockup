@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    
+    let cellIdentfier = "tipCell"
     let jsonURL: URLStringConvertible = "https://demo7998593.mockable.io/smarttips.json"
     var json: JSON = JSON([])
     
@@ -68,7 +68,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        guard let cell: TipTableViewCell = tableView.dequeueReusableCellWithIdentifier("tipCell") as? TipTableViewCell else {
+        guard let cell: TipTableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentfier) as? TipTableViewCell else {
             return UITableViewCell()
         }
         
@@ -108,7 +108,7 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
             
-        guard let cell: TipTableViewCell = tableView.dequeueReusableCellWithIdentifier("tipCell") as? TipTableViewCell else {
+        guard let cell: TipTableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentfier) as? TipTableViewCell else {
             return UITableViewCell().bounds.size.height
         }
         

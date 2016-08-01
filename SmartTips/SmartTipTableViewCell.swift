@@ -1,5 +1,5 @@
 //
-//  TipTableViewCell.swift
+//  SmartTipTableViewCell.swift
 //  SmartTips
 //
 //  Created by Christopher Bonuel on 7/28/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TipTableViewCell: UITableViewCell {
+class SmartTipTableViewCell: UITableViewCell {
 
     @IBOutlet weak var providerLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!

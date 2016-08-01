@@ -68,7 +68,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        guard let cell: TipTableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentfier) as? TipTableViewCell else {
+        guard let cell: SmartTipTableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentfier) as? SmartTipTableViewCell else {
             return UITableViewCell()
         }
         
@@ -108,7 +108,7 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
             
-        guard let cell: TipTableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentfier) as? TipTableViewCell else {
+        guard let cell: SmartTipTableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentfier) as? SmartTipTableViewCell else {
             return UITableViewCell().bounds.size.height
         }
         

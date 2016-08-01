@@ -21,7 +21,7 @@
 		856F67231D4812F10031876A /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 856F671E1D4804140031876A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8594F2AF1D492E3A001B1F3F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8594F2AE1D492E3A001B1F3F /* SwiftyJSON.framework */; };
 		8594F2B01D492E5B001B1F3F /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8594F2AE1D492E3A001B1F3F /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		85AFB6C81D4AB2800008B66D /* TipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFB6C71D4AB2800008B66D /* TipTableViewCell.swift */; };
+		85AFB6C81D4AB2800008B66D /* SmartTipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFB6C71D4AB2800008B66D /* SmartTipTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,7 +53,7 @@
 		856F67181D47E4B60031876A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		856F671E1D4804140031876A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		8594F2AE1D492E3A001B1F3F /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
-		85AFB6C71D4AB2800008B66D /* TipTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipTableViewCell.swift; sourceTree = "<group>"; };
+		85AFB6C71D4AB2800008B66D /* SmartTipTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartTipTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,7 @@
 				85530EC51D4FCEF1007E4016 /* SmartTip.swift */,
 				853EED7E1D4AEB3200071E0F /* SmartTipViewController.swift */,
 				85673A621D4BD9EE005146A2 /* Status.swift */,
-				85AFB6C71D4AB2800008B66D /* TipTableViewCell.swift */,
+				85AFB6C71D4AB2800008B66D /* SmartTipTableViewCell.swift */,
 				85673A5E1D4BAB3E005146A2 /* SmartTipColor.swift */,
 				856F67101D47E4B60031876A /* Main.storyboard */,
 				856F67131D47E4B60031876A /* Assets.xcassets */,
@@ -181,7 +181,7 @@
 				856F670F1D47E4B60031876A /* ViewController.swift in Sources */,
 				85673A651D4C14DC005146A2 /* JSONPaths.swift in Sources */,
 				85673A5F1D4BAB3E005146A2 /* SmartTipColor.swift in Sources */,
-				85AFB6C81D4AB2800008B66D /* TipTableViewCell.swift in Sources */,
+				85AFB6C81D4AB2800008B66D /* SmartTipTableViewCell.swift in Sources */,
 				853EED7F1D4AEB3200071E0F /* SmartTipViewController.swift in Sources */,
 				85530EC61D4FCEF1007E4016 /* SmartTip.swift in Sources */,
 				856F670D1D47E4B60031876A /* AppDelegate.swift in Sources */,

@@ -53,6 +53,14 @@ struct SmartTip {
         description = d
         status = s
     }
+    
+    mutating func reject() {
+        status = Status.Rejected
+    }
+    
+    mutating func accept() {
+        status = Status.Accepted
+    }
 }
 
 extension SmartTip: Equatable, Comparable {

@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showSmartTipDetailView" {
             if let tipVC = segue.destinationViewController as? SmartTipViewController, index = tableView.indexPathForSelectedRow?.row {
-                tipVC.data = json[arrayPath][index]
+                tipVC.smartTip = smartTips[index]
                 tipVC.delegate = self
             }
         }

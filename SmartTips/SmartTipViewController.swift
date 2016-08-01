@@ -24,7 +24,7 @@ class SmartTipViewController: UIViewController {
     @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     
-    var data: JSON = JSON([])
+    var smartTip: SmartTip!
     var statusPicked: Status = .Read
     var delegate: SmartTipDelegate!
 

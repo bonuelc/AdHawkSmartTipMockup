@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     }
     
     func parseJSON() {
-        for smartTip in json[arrayPath].arrayValue {
+        for smartTip in json[dataPath].arrayValue {
             if let validTip = SmartTip(smartTip: smartTip) {
                 smartTips.append(validTip)
             }

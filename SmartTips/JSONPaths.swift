@@ -8,7 +8,7 @@
 
 import SwiftyJSON
 
-let arrayPath: [JSONSubscriptType] = ["data"]
+let dataPath: [JSONSubscriptType] = ["data"]
 let providerPath: [JSONSubscriptType] = ["relationships", "identity", "data", "provider"]
 let titlePath: [JSONSubscriptType] = ["attributes", "title"]
 let descriptionPath: [JSONSubscriptType] = ["attributes", "description"]

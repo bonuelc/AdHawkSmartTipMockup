@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let cellIdentfier = "tipCell"
+    let cellIdentfier = "smartTipCell"
     let jsonURL: URLStringConvertible = "https://demo7998593.mockable.io/smarttips.json"
     var json: JSON = JSON([])
     

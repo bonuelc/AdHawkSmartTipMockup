@@ -14,7 +14,7 @@ class SmartTipJSONManager {
     var json: JSON = JSON([])
     var smartTips = [SmartTip]()
     
-    func loadArrayFromJSONurl(url: URLStringConvertible) {
+    func loadArrayFromJSONurl(url: URLStringConvertible, completionHandler: () -> ()) {
         
         Alamofire.request(.GET, url).responseJSON { response in
             
@@ -23,6 +23,7 @@ class SmartTipJSONManager {
             case .Failure(let error): print(error)
             }
             self.parseJSON()
+            completionHandler()
         }
     }
     

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SmartTipsListViewControllerswift
 //  SmartTips
 //
 //  Created by Christopher Bonuel on 7/26/16.
@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class SmartTipsListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension SmartTipsListViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return smartTips.count
@@ -71,7 +71,7 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension SmartTipsListViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         
@@ -99,7 +99,7 @@ extension ViewController: UITableViewDelegate {
     }
 }
 
-extension ViewController: SmartTipDelegate {
+extension SmartTipsListViewController: SmartTipDelegate {
     func tipStatusSelectionDidFinish(controller: SmartTipViewController) {
         controller.dismissViewControllerAnimated(true) { () in
             if let index = self.tableView.indexPathForSelectedRow?.row {

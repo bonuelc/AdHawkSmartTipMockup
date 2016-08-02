@@ -26,7 +26,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getJSON()
+        let smartTipManager = SmartTipJSONManager()
+        smartTipManager.loadArrayFromJSONurl(jsonURL)
+        smartTips = smartTipManager.smartTips
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -36,27 +38,6 @@ class ViewController: UIViewController {
                 tipVC.delegate = self
             }
         }
-    }
-
-    func getJSON() {
-        
-        Alamofire.request(.GET, jsonURL).responseJSON { response in
-            
-            switch response.result {
-            case .Success(let value): self.json = JSON(value)
-            case .Failure(let error): print(error)
-            }
-            self.parseJSON()
-        }
-    }
-    
-    func parseJSON() {
-        for smartTip in json[dataPath].arrayValue {
-            if let validTip = SmartTip(smartTip: smartTip) {
-                smartTips.append(validTip)
-            }
-        }
-        smartTips.sortInPlace()
     }
 }
 

@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let smartTipManager = SmartTipJSONManager()
+        let smartTipManager = SmartTipJSONManager.getInstance
         smartTipManager.loadArrayFromJSONurl(jsonURL) {
             self.smartTips = smartTipManager.smartTips
         }

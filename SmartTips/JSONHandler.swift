@@ -11,7 +11,10 @@ import SwiftyJSON
 
 class SmartTipJSONManager {
     
+    static let getInstance = SmartTipJSONManager()
     var smartTips = [SmartTip]()
+    
+    private init() {}
     
     func loadArrayFromJSONurl(url: URLStringConvertible, completionHandler: () -> ()) {
         

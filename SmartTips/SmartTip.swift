@@ -44,9 +44,9 @@ struct SmartTip {
         }
         
         // commented out b/c all sample data are expired
-        //        if let dateString = smartTip[expiresAtDatePath].string, expirationDate = formatter.dateFromString(dateString) {
-        //            if expirationDate < NSDate() { return nil }
-        //        }
+//        if let dateString = smartTip[expiresAtDatePath].string, expirationDate = formatter.dateFromString(dateString) {
+//            if expirationDate < NSDate() { return nil }
+//        }
         
         provider = p
         title = t

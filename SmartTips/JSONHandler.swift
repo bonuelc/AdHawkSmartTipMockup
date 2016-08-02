@@ -28,11 +28,7 @@ class SmartTipJSONManager {
     }
     
     func parseJSON() {
-        for smartTip in json[dataPath].arrayValue {
-            if let validTip = SmartTip(smartTip: smartTip) {
-                smartTips.append(validTip)
-            }
-        }
+        smartTips = json[dataPath].arrayValue.flatMap { SmartTip(smartTip: $0) }
         smartTips.sortInPlace()
     }
 }

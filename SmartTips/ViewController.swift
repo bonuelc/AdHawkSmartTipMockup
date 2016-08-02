@@ -55,10 +55,12 @@ extension ViewController: UITableViewDataSource {
         
         let smartTip = smartTips[indexPath.row]
         
+        // configure labels
         cell.providerLabel.text = smartTip.provider
         cell.titleLabel.text = smartTip.title
         cell.descriptionLabel.text = smartTip.description
         
+        // set background color
         switch smartTip.status {
         case .Accepted: cell.backgroundColor = SmartTipColor.greenColor()
         case .Rejected: cell.backgroundColor = SmartTipColor.redColor()

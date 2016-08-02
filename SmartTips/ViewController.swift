@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     
     let cellIdentfier = "smartTipCell"
     let jsonURL: URLStringConvertible = "https://demo7998593.mockable.io/smarttips.json"
-    var json: JSON = JSON([])
     
     var smartTips: [SmartTip] = [] {
         didSet {
@@ -27,8 +26,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let smartTipManager = SmartTipJSONManager()
-        smartTipManager.loadArrayFromJSONurl(jsonURL)
-        smartTips = smartTipManager.smartTips
+        smartTipManager.loadArrayFromJSONurl(jsonURL) {
+            self.smartTips = smartTipManager.smartTips
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -61,7 +61,7 @@ extension ViewController: UITableViewDataSource {
         switch smartTip.status {
         case .Accepted: cell.backgroundColor = SmartTipColor.greenColor()
         case .Rejected: cell.backgroundColor = SmartTipColor.redColor()
-        default: break
+        default: cell.backgroundColor = UIColor.whiteColor()
         }
         
         return cell
